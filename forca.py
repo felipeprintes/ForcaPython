@@ -27,6 +27,7 @@ while entradaSenha or validacaoSenha()==False:
     validacaoSenha()
     if senha==senha2:
         break
+
 print("\n\n\n...Que ótimo! Agora podemos dar prosseguimento ao nosso jogo!")
 print("\n\n\n")
 
@@ -38,14 +39,20 @@ def verficaAcerto(tentativa,letrasCertas):
         letra=input("entra com uma letra: ")
         for j in range(len(palavra_secreta)):
             if letra==palavra_secreta[j]:
-                print("Letra correta")
-                print("\nLetra encontrada no posição {}".format(j))
-                vet[j]=letra
                 letrasCertas+=1
+                print("letra encontrada na posição {}".format(j))
+                vet[j] = letra
                 print(vet)
         if len(vet)==letrasCertas:
-            print("Parabéns, você encontrou a palavra secreta")
+            print("\n\n\nParabéns, você encontrou a palavra secreta")
+            print(vet)
             break
+        elif letra not in palavra_secreta:
+            print("Que pena, você errou")
+
         tentativa-=1
 
 verficaAcerto(tentativa,letrasCertas)
+
+if len(vet)!=letrasCertas:
+    print("\n :'( Que pena, você foi enforcado") 
