@@ -1,3 +1,4 @@
+
 #Variaveis
 palavra_secreta = 'bola'
 tentativa = 5
@@ -55,4 +56,4 @@ def verficaAcerto(tentativa,letrasCertas):
 verficaAcerto(tentativa,letrasCertas)
 
 if len(vet)!=letrasCertas:
-    print("\n :'( Que pena, você foi enforcado") 
+    print("\n :'( Que pena, você foi enforcado")
